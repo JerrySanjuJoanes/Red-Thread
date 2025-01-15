@@ -1,13 +1,20 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Calendar from "./components/Calender"; // Fixed typo: "Calender" -> "Calendar"
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="h-screen flex flex-col justify-center items-center  bg-black"></div>
+    <div className="h-screen bg-gray-100">
+      <div className="w-full h-1/2 flex gap-5 p-5">
+        {/* Left Section */}
+        <div className="w-1/2 bg-slate-300 rounded-lg shadow-md"></div>
+
+        {/* Right Section */}
+        <div className="w-1/2 h-fit flex justify-center items-center  ">
+          <Calendar />
+        </div>
+      </div>
+    </div>
   );
 }
 
